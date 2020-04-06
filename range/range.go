@@ -3,6 +3,11 @@ package main
 import "fmt"
 
 func main() {
+
+	var name string
+	fmt.Println("Enter your Name")
+	fmt.Scan(&name)
+	fmt.Println("Hello ", name)
 	strArr := []string{"Coders", "Arena"}
 	for i, c := range strArr {
 		fmt.Println(i)
