@@ -15,6 +15,15 @@ func profile(name string) {
 	// return pro
 }
 
+// Variadic functions ... Pass any number of inputs to function
+func multi(nums ...int) int {
+	total := 1
+	for _, num := range nums {
+		total *= num
+	}
+	return total
+}
+
 // Multi return functions
 func calculator(a, b int) (int, int, int, int) {
 	return a + b, a - b, a * b, a / b
@@ -28,9 +37,13 @@ func main() {
 	fmt.Print("Enter B ")
 	fmt.Scan(&b)
 
+	fmt.Println("[+] Calculator Function")
 	add, sub, mult, div := calculator(a, b)
 	fmt.Println("[+] Addition is :- ", add)
 	fmt.Println("[+] Substraction is :- ", sub)
 	fmt.Println("[+] Multiplication is :- ", mult)
 	fmt.Println("[+] Division is :- ", div)
+
+	fmt.Println("[+] Variadic function")
+	fmt.Println(multi(3, 5, 7, 3, 2))
 }
